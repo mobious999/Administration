@@ -1,25 +1,24 @@
-#requires -version 5.1
 <#
 .SYNOPSIS
   This script can be used to (insert what it does here)
 .DESCRIPTION
   
 .PARAMETER <Parameter_Name>
-    List all parameters here
-    $xmlfilename
-    $htmlfilename
-    $exportpath
-    $errorlog
-    $logfile
-    $logfolder
+  List all parameters here
+  $xmlfilename
+  $htmlfilename
+  $exportpath
+  $errorlog
+  $logfile
+  $logfolder
 .INPUTS
-    List all inputs here
-    $xmlfilename - name of the xml file
-    $htmlfilename - name of the html report
-    $exportpath - path to where the export should be created
-    $errorlog - the log that gets created on a trapped error
-    $logfile - the log of the action and completion
-    $logfolder - where the logs get created
+  List all inputs here
+  $xmlfilename - name of the xml file
+  $htmlfilename - name of the html report
+  $exportpath - path to where the export should be created
+  $errorlog - the log that gets created on a trapped error
+  $logfile - the log of the action and completion
+  $logfolder - where the logs get created
 .OUTPUTS
     Standard logfiles if enabled
 .NOTES

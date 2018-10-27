@@ -1,4 +1,3 @@
-#requires -version 5.1
 <#
 .SYNOPSIS
   This script can be used to move a user to another ou
@@ -25,8 +24,11 @@
   Author:         Mark Quinn
   Creation Date:  9/30/2018
   Purpose/Change: Initial script development
+  
+.LINK
   Based on this article 
   https://blog.netwrix.com/2018/06/26/managing-ous-and-moving-their-objects-with-powershell/#Create%20OUs%20in%20an%20Active%20Directory%20Domain%20with%20PowerShell
+
 .EXAMPLE
   -\moveusers -username (name of user to be moved) -destou (the ou where they are to be moved to)
   To add error logging add the following parameters from below

@@ -1,4 +1,3 @@
-#requires -version 5.1
 <#
 .SYNOPSIS
   This script can be used to (insert what it does here)
@@ -141,8 +140,11 @@
   Author:         Mark Quinn
   Creation Date:  9/30/2018
   Purpose/Change: Initial script development
+
+.LINK
   Based on this article
   https://docs.microsoft.com/en-us/powershell/module/addsadministration/new-aduser?view=win10-ps
+  
 .EXAMPLE
   Create a user with an imported certificate
   New-ADUser -Name "ChewDavid" -Certificate (New-Object System.Security.Cryptography.X509Certificates.X509Certificate -ArgumentList "Export.cer")

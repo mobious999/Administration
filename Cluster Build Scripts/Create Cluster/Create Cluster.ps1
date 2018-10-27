@@ -1,4 +1,3 @@
-#requires -version 5.1
 <#
 .SYNOPSIS
   This script can be used to create a windows cluster
@@ -35,8 +34,11 @@
   Author:         Mark Quinn
   Creation Date:  9/30/2018
   Purpose/Change: Initial script development
+.LINK
+
   Based on this article
   https://docs.microsoft.com/en-us/powershell/module/failoverclusters/new-cluster?view=win10-ps
+
   You must have the following rights to use the script Create Computer Objects and Read All Properties in the ou the server resides in.
   
 .EXAMPLE

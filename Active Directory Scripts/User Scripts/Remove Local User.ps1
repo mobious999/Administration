@@ -1,4 +1,3 @@
-#requires -version 2
 <#
 .SYNOPSIS
     This script can be used to remove a local user
@@ -20,8 +19,11 @@
   Author:         Mark Quinn
   Creation Date:  9/30/2018
   Purpose/Change: Initial script development
+
+.LINK
   Based on this article
   https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.localaccounts/remove-localuser?view=powershell-5.1
+  
 .EXAMPLE
   .\remove local user.ps1 -name (enter name of local user) -errorlog (logfilename) -logfile (logfilename) -logfolder (path to the log files)
   Delete a user account

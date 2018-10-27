@@ -1,4 +1,3 @@
-#requires -version 2
 <#
 .SYNOPSIS
   This script can be used to add a local user account
@@ -41,8 +40,10 @@
   Author:         Mark Quinn
   Creation Date:  9/30/2018
   Purpose/Change: Initial script development
+.LINK
   Based on this article
   https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.localaccounts/new-localuser?view=powershell-5.1
+  
 .EXAMPLE
   Create a user account
   New-LocalUser -Name "User02" -Description "Description of this account." -NoPassword

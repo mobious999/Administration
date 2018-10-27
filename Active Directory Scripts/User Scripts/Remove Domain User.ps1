@@ -1,4 +1,3 @@
-#requires -version 5
 <#
 .SYNOPSIS
     This script can be used to remove an active directory user
@@ -35,8 +34,10 @@
     Author:         Mark Quinn
     Creation Date:  9/30/2018
     Purpose/Change: Initial script development
+.LINK
     Based on this article
     https://docs.microsoft.com/en-us/powershell/module/addsadministration/remove-aduser?view=win10-ps
+
 .EXAMPLE
     Remove a specified user
     Remove-ADUser -Identity GlenJohn

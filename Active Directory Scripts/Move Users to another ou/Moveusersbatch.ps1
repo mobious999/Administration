@@ -1,32 +1,38 @@
-#requires -version 5.1
 <#
 .SYNOPSIS
   This script can be used to (insert what it does here)
 .DESCRIPTION
-  
+  This script will move the usernames contained in the csv file mentioned in the script from one location to another.
+
 .PARAMETER <Parameter_Name>
-    List all parameters here
-    $targetou 
-    $csvpath
-    $errorlog
-    $logfile
-    $logfolder
+  List all parameters here
+  $targetou 
+  $csvpath
+  $errorlog
+  $logfile
+  $logfolder
+
 .INPUTS
-    List all inputs here
-    $targetou - the destination ou for the users
-    $csvpath  - the path to the csv file
-    $errorlog - the log that gets created on a trapped error
-    $logfile - the log of the action and completion
-    $logfolder - where the logs get created
+  List all inputs here
+  $targetou - the destination ou for the users
+  $csvpath  - the path to the csv file
+  $errorlog - the log that gets created on a trapped error
+  $logfile - the log of the action and completion
+  $logfolder - where the logs get created
+
 .OUTPUTS
     Standard logfiles if enabled
-.NOTES
+
+  .NOTES
   Version:        1.0
   Author:         Mark Quinn
   Creation Date:  9/30/2018
   Purpose/Change: Initial script development
+
+.LINK
   Based on this article 
   https://blog.netwrix.com/2018/06/26/managing-ous-and-moving-their-objects-with-powershell/#Create%20OUs%20in%20an%20Active%20Directory%20Domain%20with%20PowerShell
+  
 .EXAMPLE
   .\moveusersbatch -targetou "ou where the users should be moved" -csvpath (path to the csv file)
   To add error logging add the following parameters from below
@@ -53,7 +59,6 @@ Param(
 )
 
 $csvfile = Import-Csv -Path $csvpath
-
 
 #capture where the script is being run from
 $ScriptDir = Split-Path $script:MyInvocation.MyCommand.Path

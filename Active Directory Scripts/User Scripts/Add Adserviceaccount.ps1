@@ -1,79 +1,78 @@
-#requires -version 5
 <#
 .SYNOPSIS
   This script can be used to (insert what it does here)
 .DESCRIPTION
   
 .PARAMETER <Parameter_Name>
-    List all parameters here
-    $errorlog
-    $logfile
-    $logfolder
-    WhatIf
-    $Confirm
-    $AccountExpirationDate <DateTime>
-    $AccountNotDelegated <Boolean>
-    $AuthenticationPolicy <ADAuthenticationPolicy>
-    $AuthenticationPolicySilo <ADAuthenticationPolicySilo>
-    $AuthType <ADAuthType>
-    $Certificates <String
-    $CompoundIdentitySupported <Boolean>
-    $Credential <PSCredential>
-    $Description <String>
-    $DisplayName <String>
-      -DNSHostName <String>
-    $Enabled <Boolean>
-    $HomePage <String>
-    $Instance <ADServiceAccount>
-    $KerberosEncryptionType <ADKerberosEncryptionType>
-    $ManagedPasswordIntervalInDays <Int32>
-    $Name <String>
-    $OtherAttributes <Hashtable>
-    $PassThru
-    $Path <String>
-    $PrincipalsAllowedToDelegateToAccount <ADPrincipal
-    $PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal
-    $SamAccountName <String>
-    $Server <String>
-    $ServicePrincipalNames <String
-    $TrustedForDelegation <Boolean>
-    #required parameters
+  List all parameters here
+  $Confirm
+  $AccountExpirationDate <DateTime>
+  $AccountNotDelegated <Boolean>
+  $AuthenticationPolicy <ADAuthenticationPolicy>
+  $AuthenticationPolicySilo <ADAuthenticationPolicySilo>
+  $AuthType <ADAuthType>
+  $Certificates <String
+  $CompoundIdentitySupported <Boolean>
+  $Credential <PSCredential>
+  $Description <String>
+  $DisplayName <String>
+    -DNSHostName <String>
+  $Enabled <Boolean>
+  $HomePage <String>
+  $Instance <ADServiceAccount>
+  $KerberosEncryptionType <ADKerberosEncryptionType>
+  $ManagedPasswordIntervalInDays <Int32>
+  $Name <String>
+  $OtherAttributes <Hashtable>
+  $PassThru
+  $Path <String>
+  $PrincipalsAllowedToDelegateToAccount <ADPrincipal
+  $PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal
+  $SamAccountName <String>
+  $Server <String>
+  $ServicePrincipalNames <String
+  $TrustedForDelegation <Boolean>
+  #required parameters
     -DNSHostName
     -Name
     -RestrictToOutboundAuthenticationOnly
     -RestrictToSingleComputer
+  $errorlog
+  $logfile
+  $logfolder
+
 .INPUTS
-    List all inputs here
-    $errorlog - the log that gets created on a trapped error
-    $logfile - the log of the action and completion
-    $logfolder - where the logs get created
-    $Confirm
-    $AccountExpirationDate <DateTime>
-    $AccountNotDelegated <Boolean>
-    $AuthenticationPolicy <ADAuthenticationPolicy>
-    $AuthenticationPolicySilo <ADAuthenticationPolicySilo>
-    $AuthType <ADAuthType>
-    $Certificates <String
-    $CompoundIdentitySupported <Boolean>
-    $Credential <PSCredential>
-    $Description <String>
-    $DisplayName <String>
-      -DNSHostName <String>
-    $Enabled <Boolean>
-    $HomePage <String>
-    $Instance <ADServiceAccount>
-    $KerberosEncryptionType <ADKerberosEncryptionType>
-    $ManagedPasswordIntervalInDays <Int32>
-    $Name <String>
-    $OtherAttributes <Hashtable>
-    $PassThru
-    $Path <String>
-    $PrincipalsAllowedToDelegateToAccount <ADPrincipal
-    $PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal
-    $SamAccountName <String>
-    $Server <String>
-    $ServicePrincipalNames <String
-    $TrustedForDelegation <Boolean>
+  List all inputs here
+  $errorlog - the log that gets created on a trapped error
+  $logfile - the log of the action and completion
+  $logfolder - where the logs get created
+  $Confirm
+  $AccountExpirationDate <DateTime>
+  $AccountNotDelegated <Boolean>
+  $AuthenticationPolicy <ADAuthenticationPolicy>
+  $AuthenticationPolicySilo <ADAuthenticationPolicySilo>
+  $AuthType <ADAuthType>
+  $Certificates <String
+  $CompoundIdentitySupported <Boolean>
+  $Credential <PSCredential>
+  $Description <String>
+  $DisplayName <String>
+    -DNSHostName <String>
+  $Enabled <Boolean>
+  $HomePage <String>
+  $Instance <ADServiceAccount>
+  $KerberosEncryptionType <ADKerberosEncryptionType>
+  $ManagedPasswordIntervalInDays <Int32>
+  $Name <String>
+  $OtherAttributes <Hashtable>
+  $PassThru
+  $Path <String>
+  $PrincipalsAllowedToDelegateToAccount <ADPrincipal
+  $PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal
+  $SamAccountName <String>
+  $Server <String>
+  $ServicePrincipalNames <String
+  $TrustedForDelegation <Boolean>
 .OUTPUTS
     Standard logging is available when using the $errorlog $logfile and $logdir directories    
 .NOTES
@@ -81,8 +80,10 @@
     Author:         Mark Quinn
     Creation Date:  9/30/2018
     Purpose/Change: Initial script development
+.LINK
     Based on this article
     https://docs.microsoft.com/en-us/powershell/module/addsadministration/new-adserviceaccount?view=win10-ps
+    
 .EXAMPLE
     #Create an enabled managed service account
     New-ADServiceAccount -Name "Service01" -DNSHostName "Service01.contoso.com" -Enabled $True -errorlog (logfilename) -logfile (logfilename) -logfolder (path to the log files)
