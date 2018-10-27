@@ -1,4 +1,3 @@
-#requires -version 2
 <#
 .SYNOPSIS
   This script can be used to (insert what it does here)
