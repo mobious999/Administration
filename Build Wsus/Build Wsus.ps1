@@ -33,14 +33,6 @@ Param(
   [string]$updatefolderpath,
 	
   [Parameter(Mandatory=$False)]
-  [ValidateNotNull()]
-  [string]$parameter2,
-
-  [Parameter(Mandatory=$False)]
-  [ValidateNotNull()]
-  [string]$parameter3,
-
-  [Parameter(Mandatory=$False)]
   [string]$errorlog,
 
   [Parameter(Mandatory=$False)]
@@ -77,6 +69,7 @@ if ($updatefolderpath){
 Try {
   #begin the post deploy
   .\wsusutil.exe postinstall CONTENT_DIR=$updatefolderpath
+  #get the correct instance name from default sql express
   .\wsusutil.exe postinstall SQL_INSTANCE_NAME="DC1\SQL2008" CONTENT_DIR=D:\WSUS 
 }
  
