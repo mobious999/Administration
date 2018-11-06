@@ -22,7 +22,7 @@
   Purpose/Change: Initial script development
   Based on this article 
 .LINK 
-
+  http://daveslog.com/2017/03/12/install-sql-express-2014-from-powershell/
 .EXAMPLE
   To add error logging add the following parameters from below
   -errorlog (logfilename) -logfile (logfilename) -logfolder (path to the log files)
@@ -63,7 +63,10 @@ if ($logfolder){
 }
 
 Try {
-  
+  $params = @'
+  /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /QS /HIDECONSOLE /INDICATEPROGRESS="True" /IAcceptSQLServerLicenseTerms /SQLSVCACCOUNT="NT AUTHORITY\NETWORK SERVICE" /SQLSYSADMINACCOUNTS="builtin\administrators" /SKIPRULES="RebootRequiredCheck" 
+'@ 
+  Start-process .\setup.exe $params -wait
 }
  
 Catch {
