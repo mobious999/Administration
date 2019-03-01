@@ -111,7 +111,7 @@ Finally {
 
 
 Try {
-  Get-ADUser -SearchBase 'DC=Quinn,DC=local' -filter {employeeNumber -ne "$null"} | % {Add-ADGroupMember "Testgroup" $_.SamAccountName}
+  Get-ADUser -SearchBase 'DC=Quinn,DC=local' -filter {employeeNumber -ne "$null"} | ForEach-Object {Add-ADGroupMember "Testgroup" $_.SamAccountName}
 }
  
 Catch {
